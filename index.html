@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Survey Form</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" type="text/css" media="screen" href="survey-form.css" />
+    </head>
+    <body>
+        <div class="container">
+            <header><h1 id="title" style="text-align: center">Survey Form</h1></header>
+
+            <form id="survey-form">
+                <p id="description">Let us know how to improve our website</p>
+
+                <fieldset name="username">
+                    <!--Add CSS to div, not directly ot fieldset-->
+                    <div>
+                        <label for="name" id="name-label"><abbr title="required">* Name:</abbr></label>
+                        <input id="name" type="text" name="username" placeholder="Enter your name" required />
+                    </div>
+                </fieldset>
+
+                <fieldset name="email">
+                    <div>
+                        <label for="email" id="email-label"><abbr title="required">* Email</abbr></label>
+                        <input id="email" type="email" name="email" placeholder="Enter your email" required />
+                    </div>
+                </fieldset>
+
+                <fieldset name="age">
+                    <div>
+                        <label for="age" id="age-label"><abbr title="required">* Age</abbr></label>
+                        <input id="age" type="number" name="age" min="1" max="140" placeholder="Age" required />
+                    </div>
+                </fieldset>
+
+                <fieldset name="job" id="dropdown">
+                    <div>
+                        <label for="role">Which option best describes your current role?</label>
+                        <select id="role">
+                            <option value="prompt" disabled>Select your option</option>
+                            <option value="student">Student</option>
+                            <option value="full-time-job">Full time job</option>
+                            <option value="full-time-learner">Full time leaner</option>
+                            <option value="not-say">Prefer not to say</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset name="people">
+                    <div>
+                        <legend>How likely is that you would recommend freeCodeCamp to a friend?</legend>
+                        <div>
+                            <input id="definitely" type="radio" value="definitely" name="people" />
+                            <label for="definitely">Definitely</label><br />
+
+                            <input id="maybe" type="radio" value="maybe" name="people" checked />
+                            <label for="maybe">Maybe</label><br />
+
+                            <input id="never" type="radio" value="never" name="people" />
+                            <label for="never">Never</label><br />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset name="like">
+                    <div>
+                        <legend>What do you like most in FCC</legend>
+
+                        <select>
+                            <option value="prompt" disabled>Selelct an opiton</option>
+                            <option value="challenges">Challenges</option>
+                            <option value="projects">Projects</option>
+                            <option value="community">Community</option>
+                            <option value="open-source">Open sources</option>
+                        </select>
+                    </div>
+                </fieldset>
+
+                <fieldset name="improve">
+                    <div>
+                        <legend>
+                            Things that should be improved in the future:<br />
+                            (Check all that apply)
+                        </legend>
+                        <div>
+                            <input id="front-end" type="checkbox" value="front-end" />
+                            <label for="front-end">Front-end projects</label><br />
+
+                            <input id="back-end" type="checkbox" value="front-end" />
+                            <label for="back-end">Back-end projects</label><br />
+
+                            <input id="data-visualization" type="checkbox" value="data-visualization" />
+                            <label for="data-visualization">Data visualization</label><br />
+
+                            <input id="challenges" type="checkbox" value="challenges" />
+                            <label for="challenges">Challenges</label><br />
+
+                            <input id="open-sources" type="checkbox" value="open-sources" />
+                            <label for="open-sources">Open source community</label><br />
+
+                            <input id="help-room" type="checkbox" value="help-room" />
+                            <label for="help-room">Glitter help room</label><br />
+
+                            <input id="meetup" type="checkbox" value="meetup" /> <label for="meetup">City meetup</label
+                            ><br />
+
+                            <input id="wiki" type="checkbox" value="wiki" /> <label for="wiki">Wiki</label><br />
+
+                            <input id="forum" type="checkbox" value="forum" /> <label for="forum">Forum</label><br />
+
+                            <input id="other" type="checkbox" value="other" />
+                            <label for="other">Additonal course</label><br />
+                        </div>
+                    </div>
+                </fieldset>
+
+                <fieldset name="comment">
+                    <div>
+                        <label for="comment">Any Comments or Suggestions?</label>
+                        <textarea id="comment" rows="4" cols="30" placeholder="Enter your comment here...."></textarea>
+                    </div>
+                </fieldset>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
